@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--font-display: 'Fraunces', ui-serif, Georgia, serif;
+	--font-sans: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
+	--color-ink: #163325;
+	--color-leaf: #3d7a58;
+	--color-leaf-dark: #1b4332;
+	--color-cream: #f4efe6;
+	--color-sand: #e4d8c4;
+	--color-moss: #8a9a7c;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-sans);
+	color: var(--color-ink);
+	background: var(--color-cream);
+}
