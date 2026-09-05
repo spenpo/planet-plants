@@ -1,65 +1,69 @@
 export const site = {
-	name: 'Palnet Plants',
-	tagline: 'Houseplants, delivered.',
+	name: 'Plants',
+	tagline: 'Bring the greenhouse home.',
 	description:
-		'A demo marketing site for Palnet Plants — curated indoor plants with care guides and doorstep delivery.'
+		'The same plants from the app, laid out for the web. White cards, quiet type, and a collection that fits real rooms.'
 };
 
 export const nav = [
-	{ href: '/', label: 'Home' },
-	{ href: '/about', label: 'About' },
-	{ href: '/pricing', label: 'Pricing' }
+	{ href: '/#indoor', label: 'Indoor' },
+	{ href: '/#outdoor', label: 'Outdoor' },
+	{ href: '/#cactus', label: 'Cactus' },
+	{ href: '/#aromatic', label: 'Aromatic' }
 ] as const;
 
-export const features = [
+export const featured = [
 	{
-		title: 'Curated, not crowded',
-		body: 'A short list of plants that actually thrive indoors. No filler, no mystery species.'
+		name: 'Phalaenopsis',
+		caption: 'Indoor orchid',
+		price: '28,00€',
+		image:
+			'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80'
 	},
 	{
-		title: 'Care that sticks',
-		body: 'Every order includes a one-page care card: light, water, and what to do in the first two weeks.'
+		name: 'Echeveria',
+		caption: 'Compact succulent',
+		price: '12,99€',
+		image:
+			'https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=600&q=80'
 	},
 	{
-		title: 'Delivered ready to live',
-		body: 'Shipped in protective packaging with soil already settled. Unpack, place, and leave it be.'
+		name: 'Areca palm',
+		caption: 'Bright rooms',
+		price: '34,00€',
+		image:
+			'https://images.unsplash.com/photo-1614594895170-1762004822d3?auto=format&fit=crop&w=600&q=80'
 	}
 ] as const;
 
-export const steps = [
+export const popular = [
 	{
-		n: '01',
-		title: 'Pick a plant',
-		body: 'Filter by light, size, and how involved you want to be.'
+		name: 'Snake plant',
+		caption: 'Low light',
+		price: '18,00€',
+		image:
+			'https://images.unsplash.com/photo-1593482892290-f54927ae2b7a?auto=format&fit=crop&w=200&q=80'
 	},
 	{
-		n: '02',
-		title: 'We pack it',
-		body: 'Each plant is inspected, watered, and boxed the morning it ships.'
+		name: 'Monstera',
+		caption: 'Bright indirect',
+		price: '24,50€',
+		image:
+			'https://images.unsplash.com/photo-1614594805320-e6a734357fa3?auto=format&fit=crop&w=200&q=80'
 	},
 	{
-		n: '03',
-		title: 'You place it',
-		body: 'Follow the care card. Most plants settle in within a week.'
+		name: 'Pothos',
+		caption: 'Easy care',
+		price: '11,99€',
+		image:
+			'https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=200&q=80'
 	}
 ] as const;
 
-export const quotes = [
-	{
-		quote: 'The pothos arrived upright and already putting out a new leaf. That never happens.',
-		name: 'Mira K.',
-		role: 'Apartment, low light'
-	},
-	{
-		quote: 'I wanted one plant I would not kill. The care card is the whole product, honestly.',
-		name: 'James O.',
-		role: 'First-time plant person'
-	},
-	{
-		quote: 'We ordered three for the studio. They still look like the photos two months later.',
-		name: 'Elena V.',
-		role: 'Small office'
-	}
+export const trust = [
+	{ icon: '🚚', label: 'Free shipping over 40€' },
+	{ icon: '🪴', label: 'Care guides with every plant' },
+	{ icon: '✓', label: '30-day happy plant guarantee' }
 ] as const;
 
 export const plans = [

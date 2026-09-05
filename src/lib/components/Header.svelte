@@ -1,17 +1,18 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { nav, site } from '$lib/content';
+	import { nav } from '$lib/content';
 	import Logo from '$lib/components/Logo.svelte';
 
 	let open = $state(false);
 
 	function isActive(href: string) {
-		return href === '/' ? page.url.pathname === '/' : page.url.pathname.startsWith(href);
+		if (href.includes('indoor')) return page.url.pathname === '/';
+		return false;
 	}
 </script>
 
-<header class="sticky top-0 z-20 border-b border-sand/80 bg-cream/90 backdrop-blur">
-	<div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
+<header class="bg-cream">
+	<div class="mx-auto flex max-w-[1440px] items-center justify-between gap-6 px-8 py-6 md:px-16">
 		<a
 			href="/"
 			class="rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-leaf"
@@ -19,25 +20,26 @@
 			<Logo />
 		</a>
 
-		<nav class="hidden items-center gap-8 md:flex" aria-label="Primary">
+		<nav class="hidden items-center gap-7 md:flex" aria-label="Primary">
 			{#each nav as item (item.href)}
 				<a
 					href={item.href}
 					class={[
-						'text-sm font-medium tracking-wide',
-						isActive(item.href) ? 'text-leaf-dark' : 'text-ink/70 hover:text-ink'
+						'text-[15px] tracking-wide',
+						isActive(item.href) ? 'font-bold text-ink' : 'font-medium text-muted hover:text-ink'
 					]}
 				>
 					{item.label}
 				</a>
 			{/each}
-			<a
-				href="/pricing"
-				class="rounded-full bg-leaf-dark px-4 py-2 text-sm font-semibold text-cream hover:bg-ink"
-			>
-				Get a plant
-			</a>
 		</nav>
+
+		<a
+			href="/pricing"
+			class="hidden rounded-full bg-ink px-5 py-3 text-[15px] font-bold text-white hover:bg-leaf md:inline-flex"
+		>
+			Shop plants
+		</a>
 
 		<button
 			type="button"
@@ -72,7 +74,15 @@
 					</a>
 				</li>
 			{/each}
+			<li>
+				<a
+					href="/pricing"
+					class="mt-2 inline-flex rounded-full bg-ink px-4 py-2 text-sm font-bold text-white"
+					onclick={() => (open = false)}
+				>
+					Shop plants
+				</a>
+			</li>
 		</ul>
-		<p class="mt-4 text-sm text-ink/60">{site.tagline}</p>
 	</nav>
 </header>
