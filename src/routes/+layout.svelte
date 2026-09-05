@@ -14,12 +14,12 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
 		rel="stylesheet"
 	/>
 </svelte:head>
 
-<div class="flex min-h-screen flex-col">
+<div class="flex min-h-screen flex-col bg-cream">
 	<Header />
 	<main class="flex-1">{@render children()}</main>
 	<Footer />
