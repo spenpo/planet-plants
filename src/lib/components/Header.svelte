@@ -21,7 +21,7 @@
 		</a>
 
 		<nav class="hidden items-center gap-7 md:flex" aria-label="Primary">
-			{#each nav as item (item.href)}
+			{#each nav as item (item.label)}
 				<a
 					href={item.href}
 					class={[
@@ -63,7 +63,7 @@
 		aria-label="Mobile"
 	>
 		<ul class="flex flex-col gap-3">
-			{#each nav as item (item.href)}
+			{#each nav as item (item.label)}
 				<li>
 					<a
 						href={item.href}
