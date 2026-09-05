@@ -2,14 +2,18 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-	--font-display: 'Fraunces', ui-serif, Georgia, serif;
-	--font-sans: 'Source Sans 3', ui-sans-serif, system-ui, sans-serif;
-	--color-ink: #163325;
-	--color-leaf: #3d7a58;
-	--color-leaf-dark: #1b4332;
-	--color-cream: #f4efe6;
-	--color-sand: #e4d8c4;
-	--color-moss: #8a9a7c;
+	--font-display: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+	--font-sans: 'Work Sans', ui-sans-serif, system-ui, sans-serif;
+	--color-ink: #000000;
+	--color-muted: #484652;
+	--color-leaf: #2f5a3c;
+	--color-leaf-dark: #2f5a3c;
+	--color-cream: #ebeaef;
+	--color-sand: #d9d7de;
+	--color-soft: #d7e8d9;
+	--color-lilac: #c4b5e0;
+	--color-sage: #5f8f6b;
+	--color-hint: #b1b2b5;
 }
 
 html {
