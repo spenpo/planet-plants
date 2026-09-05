@@ -6,10 +6,10 @@ export const site = {
 };
 
 export const nav = [
-	{ href: '/#indoor', label: 'Indoor' },
-	{ href: '/#outdoor', label: 'Outdoor' },
-	{ href: '/#cactus', label: 'Cactus' },
-	{ href: '/#aromatic', label: 'Aromatic' }
+	{ href: '/#featured', label: 'Indoor' },
+	{ href: '/#featured', label: 'Outdoor' },
+	{ href: '/#featured', label: 'Cactus' },
+	{ href: '/#featured', label: 'Aromatic' }
 ] as const;
 
 export const featured = [

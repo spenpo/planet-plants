@@ -81,6 +81,10 @@
 </section>
 
 <section id="featured" class="mx-auto max-w-[1440px] px-8 py-14 md:px-16 md:py-16">
+	<span id="indoor" class="sr-only">Indoor</span>
+	<span id="outdoor" class="sr-only">Outdoor</span>
+	<span id="cactus" class="sr-only">Cactus</span>
+	<span id="aromatic" class="sr-only">Aromatic</span>
 	<h2 class="font-display text-3xl font-bold md:text-4xl">This week</h2>
 	<p class="mt-2 text-base text-muted">Hand-picked for bright rooms this week</p>
 
@@ -105,17 +109,13 @@
 	</div>
 </section>
 
-<section id="indoor" class="mx-auto max-w-[1440px] px-8 pb-14 md:px-16">
+<section class="mx-auto max-w-[1440px] px-8 pb-14 md:px-16">
 	<h2 class="font-display text-3xl font-bold">Popular</h2>
 	<div class="mt-6 max-w-md rounded-[28px] bg-white p-4 shadow-sm">
 		<ul class="flex flex-col gap-2">
 			{#each popular as plant (plant.name)}
 				<li class="flex items-center gap-4 rounded-2xl px-2 py-2">
-					<img
-						src={plant.image}
-						alt=""
-						class="size-14 rounded-xl object-cover"
-					/>
+					<img src={plant.image} alt="" class="size-14 rounded-xl object-cover" />
 					<div class="min-w-0 flex-1">
 						<p class="truncate text-lg">{plant.name}</p>
 						<p class="text-sm text-hint">{plant.caption}</p>
